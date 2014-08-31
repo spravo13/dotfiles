@@ -1,0 +1,24 @@
+[user]
+        email = spencer@techandcode.com
+        name = Spencer Bravo
+[github]
+        user = spravo13
+[push]
+        default = matching
+[help]
+        autocorrect = 1
+[color]
+        ui = auto
+        diff = auto
+        status = auto
+        branch = auto
+        interactive = auto
+        grep = auto
+[alias]
+        ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+        ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+        summary = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative --since=last.mon
+        last = "!git ll -1"
+        lastdiff = diff --cached HEAD^
+        diffw = diff --word-diff
+        diffc = diff --cached

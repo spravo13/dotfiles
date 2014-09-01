@@ -106,3 +106,7 @@ source ~/dotfiles/bin/git-prompt.sh
 if [ -f ~/.fzf.bash ]; then
     source ~/.fzf.bash
 fi
+
+# Path
+PATH="$HOME/bin:$PATH";
+

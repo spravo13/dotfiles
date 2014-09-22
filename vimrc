@@ -9,3 +9,10 @@ set showmatch               " highlight matching [{()}]
 set incsearch               " search as characters are entered
 set hlsearch                " highlight matches
 set wrapscan                " wrap around
+set clipboard=unnamedplus   " sets clipboard to OS not only VIM
+set ttyfast                 " makes Vim faster
+let g:clipbrdDefaultReg = '+'
+
+
+
+

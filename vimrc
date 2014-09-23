@@ -14,5 +14,3 @@ set ttyfast                 " makes Vim faster
 let g:clipbrdDefaultReg = '+'
 
 
-
-

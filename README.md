@@ -3,6 +3,12 @@ dotfiles
 
 basic files that I use to configure my Crunchbang computer. 
 
+## Installation
+
+link each file to your home with a . in front of it. i.e. "conkyrc" would be ".conkyrc"
+and also move the `update` file to somewhere in your path.
+
+
 ## Contributing
 
 I am open to pull requests just as long as you know <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html" target= "_blank">how to to write a commit

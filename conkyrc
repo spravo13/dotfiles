@@ -45,14 +45,10 @@
     ${fs_bar /}
     
     CPU ${hr 2}
-        CPU 1$alignr ${cpu cpu0}%
-  #${cpugraph cpu0}
+      CPU 1$alignr ${cpu cpu0}%
       CPU 2$alignr ${cpu cpu1}%
-  #${cpugraph cpu1}
       CPU 3$alignr ${cpu cpu2}%
-  #${cpugraph cpu2}
       CPU 4$alignr ${cpu cpu3}%
-  #${cpugraph cpu3}
     
     Battery ${hr 2}
 	 Percent Left: $alignr ${battery_percent BAT0}%

@@ -1,3 +1,6 @@
+#added for ssh keys
+ssh-add -l >/dev/null || alias ssh='ssh-add -l >/dev/null || ssh-add && unalias ssh; ssh'
+#end ssh config
 # stuff{{{1
 # If not running interactively, don't do anything
 case $- in
@@ -110,3 +113,5 @@ fi
 # Path
 PATH="$HOME/bin:$PATH";
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

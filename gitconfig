@@ -15,10 +15,17 @@
         interactive = auto
         grep = auto
 [alias]
-        ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+        #ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+        #new
+        ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative --since=last.mon
+        la = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+        #endnew
         ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-        summary = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative --since=last.mon
-        last = "!git ll -1"
-        lastdiff = diff --cached HEAD^
-        diffw = diff --word-diff
+        #summary = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative --since=last.mon
+        #last = "!git ll -1"
+        #lastdiff = diff --cached HEAD^
+        #new
+        l = "!git ll -1"
+        difflast = diff --cached HEAD^diffw = diff --word-diff
+        #endnew
         diffc = diff --cached

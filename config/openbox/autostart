@@ -88,7 +88,7 @@ conky -q &
 
 # autostart applications
 (sleep 5s && firefox) &
-(sleep 10s && terminator) &
+(sleep 10s && terminator --maximise) &
 
 #start ssh
 (ssh-add) &

@@ -28,6 +28,7 @@
 
     TEXT
     Date & Time ${hr 2}
+    
     ${alignc}${font Arial Black:size:24}${time %l:%M}${font}
     ${alignc}${Time %A %m %d %Y}
     

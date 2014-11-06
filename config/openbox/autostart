@@ -87,7 +87,7 @@ conky -q &
 (swapon /dev/sda2) &
 
 # autostart applications
-(sleep 15s && terminator --maximise) &
+(sleep 10s && terminator --maximise) &
 (sleep 5s && firefox) &
 
 #start ssh

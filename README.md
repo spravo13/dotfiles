@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-basic files that I use to configure my Crunchbang computer. All the changes I have made are to my own preference feel free to use and/or modify how you wish
+configuration files that I use to modify my Crunchbang computer to my liking. All the changes I have made are to my own preference feel free to use and/or modify how you wish
 
 ## Installation
 

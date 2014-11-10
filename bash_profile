@@ -30,7 +30,7 @@ $(__git_ps1 "${Cyan}%s ")${Yellow}\
 # (${BIBlue}\u${Cyan})─\
 # (${BIBlue}\h${Cyan})─\
 # (${BIBlue}\j${Cyan})
-# ${Cyan}└─\
+# ${Cyan)└─\
 # ${Cyan}($(cmd_check)${Cyan})\
 # ${Cyan}❯${Color_Off}❯ \
 # "

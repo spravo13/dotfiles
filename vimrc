@@ -13,4 +13,8 @@ set clipboard=unnamedplus   " sets clipboard to OS not only VIM
 set ttyfast                 " makes Vim faster
 let g:clipbrdDefaultReg = '+'
 
+" make capital w write
+nnoremap :W :w<CR>
 
+" make WW write
+nnoremap WW :w<CR>

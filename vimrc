@@ -13,8 +13,6 @@ set hlsearch                " highlight matches
 set wrapscan                " wrap around
 set ignorecase
 set title
-set mouse=a
-
 set clipboard=unnamedplus
 set ttyfast                 " makes Vim faster
 let g:clipbrdDefaultReg = '+'

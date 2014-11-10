@@ -1,3 +1,5 @@
+set nocompatible
+set t_Co=256
 set tabstop=4				" fixes stupid million tab indent
 set softtabstop=4   		" number of spaces in tab when editing
 set expandtab       		" tabs are spaces
@@ -9,7 +11,11 @@ set showmatch               " highlight matching [{()}]
 set incsearch               " search as characters are entered
 set hlsearch                " highlight matches
 set wrapscan                " wrap around
-set clipboard=unnamedplus   " sets clipboard to OS not only VIM
+set ignorecase
+set title
+set mouse=a
+
+set clipboard=unnamedplus
 set ttyfast                 " makes Vim faster
 let g:clipbrdDefaultReg = '+'
 

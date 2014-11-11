@@ -13,8 +13,13 @@ set hlsearch                " highlight matches
 set wrapscan                " wrap around
 set ignorecase
 set title
-set clipboard=unnamedplus
 set ttyfast                 " makes Vim faster
+
+
+set list
+set listchars=tab:\|\ ,eol:¬,extends:❯,precedes:❮
+
+set clipboard=unnamedplus
 let g:clipbrdDefaultReg = '+'
 
 " make capital w write

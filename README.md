@@ -5,9 +5,29 @@ configuration files that I use to modify my Crunchbang computer to my liking. Al
 
 ## Installation
 
-link each file to your home with a . in front of it. i.e. "conkyrc" would be ".conkyrc"
-and also move the `update` file to somewhere in your path.
+## Installation
 
+First you have to download the files by using:
+
+	git clone git://github.com/edvb53/dotfiles.git ~/dotfiles
+
+After the files have been downloaded you need to link the files to where the
+system looks for them:
+
+	ln -s ~/dotfiles/vim ~/.vim
+	ln -s ~/dotfiles/vimrc ~/.vimrc
+	ln -s ~/dotfiles/bashrc ~/.bashrc
+	ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+	ln -s ~/dotfiles/gitconfig ~/.gitconfig
+	ln -s ~/dotfiles/gmrunrc ~/.gmrunrc
+	ln -s ~/dotfiles/bin ~/bin
+	ln -s ~/dotfiles/themes ~/.themes/
+	ln -s ~/dotfiles/pentadactyl/ ~/.pentadactyl/
+	ln -s ~/dotfiles/pentadactylrc ~/.pentadactylrc
+	ln -s ~/dotfiles/config/clipit/ ~/.config/
+	ln -s ~/dotfiles/config/htop/ ~/.config/
+	ln -s ~/dotfiles/config/openbox/ ~/.config/
+	ln -s ~/dotfiles/config/terminator/ ~/.config/
 
 ## Contributing
 

@@ -5,8 +5,6 @@ configuration files that I use to modify my Crunchbang computer to my liking. Al
 
 ## Installation
 
-## Installation
-
 First you have to download the files by using:
 
 	git clone git://github.com/edvb53/dotfiles.git ~/dotfiles

@@ -1,25 +1,12 @@
-# prompt statement{{{1
-random_happy_face() {
-    local faces=(":)")
-    local l=${#faces[*]}
-    local sym=${faces[$(($RANDOM % $l))]}
-    echo $sym
-}
-random_sad_face() {
-    local faces=(":(")
-    local l=${#faces[*]}
-    local sym=${faces[$(($RANDOM % $l))]}
-    echo $sym
-}
 cmd_check() {
     if [[ $? = 0 ]]; then
-        echo "${Green}$(random_happy_face)";
+        echo " ${Green}✓";
     else
-        echo "${Red}$(random_sad_face)";
+        echo " ${Red}✗";
     fi;
 }
 PS1='\
-${Purple}\u:\w\
+${Purple}\u:\W\
 $(cmd_check) \
 $(__git_ps1 "${Cyan}%s ")${Yellow}\
 \$${Color_Off} \

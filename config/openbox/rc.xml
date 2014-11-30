@@ -41,8 +41,6 @@
   </placement>
   <theme>
     <name>Carbon</name>
-    <!--<name>TropicBomb</name>-->
-    <!--<name>Bamboo</name>-->
     <titleLayout>DSLIMC</titleLayout>
     <!--
       avaible characters are NDSLIMC, each can occur at most once.
@@ -60,9 +58,9 @@
       <name>Liberation Sans</name>
       <size>10</size>
       <!-- font size in points -->
-      <weight>Bold</weight>
+      <weight>bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>Normal</slant>
+      <slant>normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">

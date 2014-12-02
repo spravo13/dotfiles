@@ -6,7 +6,7 @@ set expandtab               " tabs are spaces
 set smartindent
 syntax enable               " enable syntax processing
 set showcmd                 " show command in bottom bar
-" set cursorline            " highlight current line
+"set cursorline            " highlight current line
 set showmatch               " highlight matching [{()}]
 set incsearch               " search as characters are entered
 set hlsearch                " highlight matches
@@ -14,7 +14,7 @@ set wrapscan                " wrap around
 set ignorecase
 set title
 set ttyfast                 " makes Vim faster
-
+set backspace=indent,eol,start
 
 set list
 set listchars=tab:\|\ ,eol:¬,extends:❯,precedes:❮

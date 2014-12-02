@@ -5,8 +5,9 @@ cmd_check() {
         echo " ${Red}✗";
     fi;
 }
+
 PS1='\
-${Purple}\u:\W\
+${BIGreen}\u:\W\
 $(cmd_check) \
 $(__git_ps1 "${Cyan}%s ")${Yellow}\
 \$${Color_Off} \

@@ -7,30 +7,16 @@ cmd_check() {
 }
 
 PS1='\
-${BIGreen}\u:\W\
+${BIGreen}\u: ${IWhite}\W\
 $(cmd_check) \
 $(__git_ps1 "${Cyan}%s ")${Yellow}\
 \$${Color_Off} \
 '
 
-# PS1="\
-# ${Cyan}┌─${Cyan}\
-# (${BIBlue}\u${Cyan})─\
-# (${BIBlue}\h${Cyan})─\
-# (${BIBlue}\j${Cyan})
-# ${Cyan)└─\
-# ${Cyan}($(cmd_check)${Cyan})\
-# ${Cyan}❯${Color_Off}❯ \
-# "
-
-# PS1="${Blue}\u@\h${Color_Off}:${Cyan}\w${IBlue}❯${Color_Off}❯ "
-# PS1='C:${PWD////\\\\}>'
-
 PS2="\$"
 
 # basic{{{1
 export EDITOR='vim'
-# export EDITOR='emacs'
 
 if [ "$TERM" == "xterm" ]; then
             export TERM=xterm-256color

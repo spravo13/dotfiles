@@ -95,3 +95,6 @@ conky -q &
 
 #restart cb-compositor
 (sleep 10s && cb-compositor --restart) &
+
+#killftp server
+(sleep 80s && ftpserver-stop) &

@@ -58,13 +58,15 @@
     Network ${hr 2}
     $alignc WIRELESS 
 	 Local IP: ${alignr}${addr wlan0}
-	 ESSID: $alignr ${wireless_essid wlan0}
+        External IP: ${alignr}${execpi 3600 wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//';}
+        ESSID: $alignr ${wireless_essid wlan0}
 	 Quality: $alignr ${wireless_link_qual_perc wlan0}%
 	 Inbound: $alignr ${downspeed wlan0} kb/s
 	 Outbound: $alignr ${upspeed wlan0} kb/s
     
     $alignc WIRED
-	 Local Ip: ${alignr}${addr eth0}
+	 Local IP: ${alignr}${addr eth0}
+        External IP: ${alignr}${addr eth0}
 	 Inbound $alignr ${downspeed eth0} kb/s
 	 Outbound $alignr ${upspeed eth0} kb/s
     
@@ -79,4 +81,3 @@
 	 ${top name 6} $alignr ${top pid 6} ${top cpu 6}
 	 ${top name 7} $alignr ${top pid 7} ${top cpu 7}
         ${top name 8} $alignr ${top pid 8} ${top cpu 8}
-        ${top name 9} $alignr ${top pid 9} ${top cpu 9}

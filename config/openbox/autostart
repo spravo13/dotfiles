@@ -87,14 +87,11 @@ conky -q &
 (swapon /dev/sda2) &
 
 # autostart applications
-(sleep 10s && terminator --maximise) &
+(sleep 20s && terminator --maximise) &
 (sleep 5s && firefox) &
 
 #start ssh
 (ssh-add) &
 
 #restart cb-compositor
-(sleep 10s && cb-compositor --restart) &
-
-#killftp server
-(sleep 80s && ftpserver-stop) &
+(sleep 15s && cb-compositor --restart) &

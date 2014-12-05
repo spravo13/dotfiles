@@ -121,10 +121,10 @@
     <number>4</number>
     <firstdesk>1</firstdesk>
     <names>
-      <name>1</name>
-      <name>2</name>
-      <name>3</name>
-      <name>4</name>
+      <name>Browser</name>
+      <name>Terminal</name>
+      <name>File Managing</name>
+      <name>Misc.</name>
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -132,7 +132,7 @@
   </desktops>
   <resize>
     <drawContents>yes</drawContents>
-    <popupShow>Nonpixel</popupShow>
+    <popupShow>NonPixel</popupShow>
     <!-- 'Always', 'Never', or 'Nonpixel' (xterms and such) -->
     <popupPosition>Center</popupPosition>
     <!-- 'Center' or 'Top' -->
@@ -428,22 +428,22 @@
       </action>
     </keybind>
     <keybind key="W-g">
-		<action name="Execute">
-		  <startupnotify>
-			<enabled>true</enabled>
-			<name>gFTP Client</name>
-		  </startupnotify>
-		  <command>gftp</command>	
-		</action>
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>gFTP Client</name>
+        </startupnotify>
+        <command>gftp</command>
+      </action>
     </keybind>
     <keybind key="W-s">
-		<action name="Execute">
-		  <startupnotify>
-			<enabled>true</enabled>
-			<name>SQL Client</name>
-		  </startupnotify>
-		  <command>/usr/share/dbeaver/dbeaver</command>	
-		</action>
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>SQL Client</name>
+        </startupnotify>
+        <command>/usr/share/dbeaver/dbeaver</command>
+      </action>
     </keybind>
     <keybind key="W-Tab">
       <action name="ShowMenu">
@@ -456,13 +456,13 @@
       </action>
     </keybind>
     <keybind key="W-a">
-		<action name="Execute">
-		  <startupnotify>
-			<enabled>true</enabled>
-			<name>tor</name>
-		  </startupnotify>
-		  <command>/home/spencer/downloads/tor-browser_en-US/start-tor-browser</command>	
-		</action>
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>tor</name>
+        </startupnotify>
+        <command>/home/spencer/downloads/tor-browser_en-US/start-tor-browser</command>
+      </action>
     </keybind>
     <keybind key="A-C-q">
       <action name="ShowMenu">

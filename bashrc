@@ -101,3 +101,15 @@ fi
 # Path
 PATH="$HOME/bin:$PATH";
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+#tmux config for history
+export PROMPT_COMMAND="history -a"
+shopt -s histappend
+
+#tmux config for autostart
+alias g="grep"
+alias ls="ls --color=auto"
+
+if [[ ! $TERM =~ screen ]]; then
+    exec tmux
+fi

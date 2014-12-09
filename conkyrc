@@ -39,7 +39,7 @@
     MEM $alignc $mem / $memmax $alignr $memperc%
     $membar
     
-    swap $alignc $swap / $swapmax $alignr $swapperc%
+    SWAP $alignc $swap / $swapmax $alignr $swapperc%
     ${swapbar}
 
     / $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_free_perc /}%

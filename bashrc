@@ -44,16 +44,33 @@ else
 color_prompt=
 fi
 fi
-if [ "$color_prompt" = yes ]; then
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+cmd_check() {
+    if [[ $? = 0 ]]; then
+        echo " ${Green}✓";
+    else
+        echo " ${Red}✗";
+    fi;
+}
+
+PS1='\
+${BIGreen}\u: ${IWhite}\W\
+$(cmd_check) \
+$(__git_ps1 "${Cyan}%s ")${Yellow}\
+\$${Color_Off} \
+'
+
+PS2="\$"
+
+# basic{{{1
+export EDITOR='vim'
+
+if [ "$TERM" == "xterm" ]; then
+	export TERM=xterm-256color
 fi
 unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
 ;;
 *)
 ;;
@@ -66,7 +83,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 fi
-# some more ls aliases
+
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -92,12 +109,12 @@ fi
 fi
 #}}}
 # load other files
-source ~/dotfiles/bash_profile
 source ~/dotfiles/bin/colors.sh
 source ~/dotfiles/bin/git-prompt.sh
 if [ -f ~/.fzf.bash ]; then
 source ~/.fzf.bash
 fi
+
 # Path
 PATH="$HOME/bin:$PATH";
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -110,6 +127,37 @@ shopt -s histappend
 alias g="grep"
 alias ls="ls --color=auto"
 
+bind '"\t":menu-complete'
+alias sb='source ~/.bashrc'
+alias r='reset'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+alias rm='rm -i'
+
+alias vrc='$EDITOR ~/dotfiles/vimrc'
+alias vrcb='$EDITOR ~/dotfiles/vimrc.bundles'
+alias brc='$EDITOR ~/dotfiles/bashrc'
+alias bp='$EDITOR ~/dotfiles/bash_profile'
+alias tconf='$EDITOR ~/dotfiles/tmux.conf'
+
+alias t='todoium'
+alias vncserver='/usr/lib/vino/vino-server'
+alias vncv='vncviewer'
+alias vncs='/usr/lib/vino/vino-server'
+alias ftpserver='sudo service vsftpd start'
+alias ftpserver-start='sudo service vsftpd start'
+alias ftpserver-stop='sudo service vsftpd stop'
+
+alias v='xmodmap ~/.vim-keys.xmodmap'
+alias emacs='emacs -nw'
+alias vless='vim -u /usr/share/vim/vim74/macros/less.vim'
+
 if [[ ! $TERM =~ screen ]]; then
     exec tmux
 fi
+

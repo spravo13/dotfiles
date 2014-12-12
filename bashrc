@@ -114,11 +114,7 @@ fi
 # load other files
 source ~/dotfiles/bin/colors.sh
 source ~/dotfiles/bin/git-prompt.sh
-#if [ -f ~/.fzf.bash ]; then
-#    source ~/.fzf.bash
-#fi
 
-# Path
 PATH="$HOME/bin:$PATH";
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
@@ -142,7 +138,6 @@ alias ln='ln -i'
 alias rm='rm -i'
 
 alias vrc='$EDITOR ~/dotfiles/vimrc'
-alias vrcb='$EDITOR ~/dotfiles/vimrc.bundles'
 alias brc='$EDITOR ~/dotfiles/bashrc'
 alias bp='$EDITOR ~/dotfiles/bash_profile'
 alias tconf='$EDITOR ~/dotfiles/tmux.conf'
@@ -155,9 +150,9 @@ alias ftpserver='sudo service vsftpd start'
 alias ftpserver-start='sudo service vsftpd start'
 alias ftpserver-stop='sudo service vsftpd stop'
 
-alias v='xmodmap ~/.vim-keys.xmodmap'
-alias emacs='emacs -nw'
-alias vless='vim -u /usr/share/vim/vim74/macros/less.vim'
+alias p='cd ~/projects'
+alias d='cd ~/dotfiles'
+alias h='cd ~/'
 
 if [[ ! $TERM =~ screen ]]; then
     exec tmux

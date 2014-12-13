@@ -1,3 +1,8 @@
 sudo apt-get update;
 sudo apt-get upgrade;
 sudo apt-get autoremove;
+
+added_keys=`ssh-add -l`
+if [ ! $(echo $added_keys | grep -o -e id_rsa) ]; then
+    ssh-add "$HOME/.ssh/id_rsa"
+fi

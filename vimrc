@@ -26,7 +26,7 @@ set listchars=tab:\|\ ,eol:¬,extends:❯,precedes:❮
 set t_ut=                   " needed if using Vim inside of tmux
 
 " make line numbers go 1,2,3,4...
-set number
+" set number
 
 let g:snips_author="Spencer Bravo"
 let g:snips_email="spencer@codeshrub.com"
@@ -81,5 +81,3 @@ set statusline+=\ %= " align left
 set statusline+=%#SLcyan#%c " column
 set statusline+=%#SLgreen#\ %p%% " percent of file
 set statusline+=%#SLblue#\ %l/%L " line/total lines
-
-

@@ -1,0 +1,39 @@
+source "gpg -d ~/.mutt.pass.gpg |"
+
+set imap_user="spencer@fabgraphics.com"
+set folder = "imaps://imap.gmail.com:993"  
+set spoolfile="+INBOX"
+set postponed="+[Gmail]/Drafts"
+set record=+[Gmail]/"Sent Mail"
+
+mailboxes =INBOX
+mailboxes imaps://imap.gmail.com/INBOX
+
+set smtp_url = "smtp://spencer@fabgraphics.com@smtp.gmail.com:587"
+set from = spencer@codeshrub.com
+set use_from = yes
+set envelope_from ="yes"
+set realname="Spencer Bravo"
+set imap_user = "spencer@fabgraphics.com"
+
+set reverse_name
+
+set editor='vim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "?^$"'
+
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+
+set smart_wrap = yes
+set sort = 'threads'
+set sort_aux = 'last-date-received'
+set imap_check_subscribed
+
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+hdr_order Date From To Cc
+
+set timeout=15
+set mail_check=5
+

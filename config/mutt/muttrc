@@ -1,7 +1,7 @@
-source "gpg -d ~/.mutt.pass.gpg |"
+source "gpg -d ~/.muttpass.gpg |"
 
 set imap_user="spencer@fabgraphics.com"
-set folder = "imaps://imap.gmail.com:993"  
+set folder = "imaps://spencer@fabgraphics.com@imap.gmail.com:993/"
 set spoolfile="+INBOX"
 set postponed="+[Gmail]/Drafts"
 set record=+[Gmail]/"Sent Mail"

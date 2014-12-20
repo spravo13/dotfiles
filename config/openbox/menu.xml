@@ -209,7 +209,7 @@
 			<item label="SQL-Client">
 				<action name="Execute">
 					<command>
-						/usr/share/dbeaver/dbeaver
+						/home/spencer/bin/dbeaver/usr/share/dbeaver/dbeaver
 					</command>
 				</action>
 			</item>

@@ -57,15 +57,15 @@ xset b off &
 conky -q &
 
 # Autostart the Dropbox deamon
-(sleep 40s && ~/.dropbox-dist/dropboxd) &
+(sleep 30s && ~/.dropbox-dist/dropboxd) &
 
 # autostart swap
 (swapon /dev/sda2) &
 
 # autostart applications
 (sleep 10s && term-start) &
-(sleep 15s && mutt-start) &
-(sleep 20s && fire-start) &
+(sleep 12s && mutt-start) &
+(sleep 15s && fire-start) &
 
 
 #start ssh

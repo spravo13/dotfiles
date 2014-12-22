@@ -63,8 +63,10 @@ conky -q &
 (swapon /dev/sda2) &
 
 # autostart applications
-(sleep 15s && terminator --maximise) &
-(sleep 5s && /home/spencer/bin/firefox/firefox) &
+(sleep 10s && term-start) &
+(sleep 15s && mutt-start) &
+(sleep 20s && fire-start) &
+
 
 #start ssh
 (ssh-add) &

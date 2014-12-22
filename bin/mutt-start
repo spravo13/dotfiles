@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-wmctrl -s 3; 
+wmctrl -s 0; 
 /usr/bin/terminator --maximise --command="mutt";

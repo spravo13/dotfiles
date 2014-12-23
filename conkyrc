@@ -2,22 +2,20 @@
     use_xft yes
     xftfont HandelGotD:size=8
     xftalpha 0.5
-    update_interval 3.0
+    update_interval 2.0
     total_run_times 0
     own_window yes
     own_window_type normal
     own_window_transparent yes
     own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
     double_buffer yes
-    minimum_size  210 730
+    minimum_size  210
     maximum_width 210
     draw_shades no
     draw_outline no
     draw_borders no
     draw_graph_borders yes
-    default_color grey
-    default_shade_color red
-    default_outline_color green
+    default_color white
     alignment top_right
     gap_x 9
     gap_y 33
@@ -28,33 +26,33 @@
 
     TEXT
     Date & Time ${hr 2}
-    
+
     ${alignc}${font Arial Black:size:24}${time %l:%M}${font}
     ${alignc}${Time %A %m %d %Y}
-    
+
     System ${hr 2}
     Hostname $alignr $nodename
     Uptime $alignr $uptime
-    
+
     MEM $alignc $mem / $memmax $alignr $memperc%
     $membar
-    
+
     SWAP $alignc $swap / $swapmax $alignr $swapperc%
     ${swapbar}
 
     / $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_free_perc /}%
     ${fs_bar /}
-    
+
     CPU ${hr 2}
       CPU 1$alignr ${cpu cpu0}%
       CPU 2$alignr ${cpu cpu1}%
       CPU 3$alignr ${cpu cpu2}%
       CPU 4$alignr ${cpu cpu3}%
-    
+
     Battery ${hr 2}
       Percent Left: $alignr ${battery_percent BAT0}%
       Time Left: $alignr ${battery_time BAT0 |  cut -c1 }
-    
+
     Network ${hr 2}
     ${alignc}   WIRELESS 
       Local IP: ${alignr}${addr wlan0}
@@ -63,13 +61,13 @@
       Quality: $alignr ${wireless_link_qual_perc wlan0}%
       Inbound: $alignr ${downspeed wlan0} kb/s
       Outbound: $alignr ${upspeed wlan0} kb/s
-    
+
     ${alignc}   WIRED
       Local IP: ${alignr}${addr eth0}
       External IP: ${alignr}${addr eth0}
       Inbound $alignr ${downspeed eth0} kb/s
       Outbound $alignr ${upspeed eth0} kb/s
-    
+
     Processes ${hr 2}
      $alignc   $processes processes ($running_processes running)
       NAME $alignr PID    CPU

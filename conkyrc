@@ -53,7 +53,7 @@
     
     Battery ${hr 2}
       Percent Left: $alignr ${battery_percent BAT0}%
-      Time Left: $alignr ${execi 60 acpi -b | awk '{print$5}'}
+      Time Left: $alignr ${battery_time BAT0 |  cut -c1 }
     
     Network ${hr 2}
     ${alignc}   WIRELESS 

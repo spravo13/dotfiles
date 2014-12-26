@@ -7,7 +7,7 @@ configuration files that I use to modify my Crunchbang computer to my liking. Al
 
 First you have to download the files by using:
 
-	git clone git://github.com/edvb53/dotfiles.git ~/dotfiles
+	git clone git://github.com/spravo13/dotfiles.git ~/dotfiles
 
 After the files have been downloaded you need to link the files to where the
 system looks for them:
@@ -17,11 +17,7 @@ system looks for them:
 	ln -s ~/dotfiles/bashrc ~/.bashrc
 	ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 	ln -s ~/dotfiles/gitconfig ~/.gitconfig
-	ln -s ~/dotfiles/gmrunrc ~/.gmrunrc
 	ln -s ~/dotfiles/bin ~/bin
-	ln -s ~/dotfiles/themes ~/.themes/
-	ln -s ~/dotfiles/pentadactyl/ ~/.pentadactyl/
-	ln -s ~/dotfiles/pentadactylrc ~/.pentadactylrc
 	ln -s ~/dotfiles/config/clipit/ ~/.config/
 	ln -s ~/dotfiles/config/htop/ ~/.config/
 	ln -s ~/dotfiles/config/openbox/ ~/.config/

@@ -58,13 +58,15 @@ conky -q &
 
 # Autostart the Dropbox deamon
 (sleep 30s && ~/.dropbox-dist/dropboxd) &
+(sleep 30s && megasync) &
+
 
 # autostart swap
 (swapon /dev/sda2) &
 
 # autostart applications
-(sleep 10s && term-start) &
-(sleep 12s && mutt-start) &
+(sleep 5s && term-start) &
+(sleep 10s && mutt-start) &
 (sleep 15s && fire-start) &
 
 

@@ -5,8 +5,3 @@
 auto lo
 iface lo inet loopback
 
-iface wlan0 inet static
-address 192.168.51.77
-netmask 255.255.255.0
-gateway 192.168.51.1
-nameserver 192.168.51.1

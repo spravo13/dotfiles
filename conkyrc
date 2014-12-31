@@ -56,7 +56,7 @@
     Network ${hr 2}
     ${alignc}   WIRELESS 
       Local IP: ${alignr}${addr wlan0}
-      External IP: ${alignr}${execpi 3600 wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//';}
+      External IP: ${alignr}${execi 10800 ~/dotfiles/bin/conkyip}
       ESSID: $alignr ${wireless_essid wlan0}
       Quality: $alignr ${wireless_link_qual_perc wlan0}%
       Inbound: $alignr ${downspeed wlan0} kb/s

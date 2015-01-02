@@ -5,7 +5,8 @@
     update_interval 2.0
     total_run_times 0
     own_window yes
-    own_window_type normal
+    own_window_type desktop
+    #own_window_type normal
     own_window_transparent yes
     own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
     double_buffer yes
@@ -64,7 +65,7 @@
 
     ${alignc}   WIRED
       Local IP: ${alignr}${addr eth0}
-      External IP: ${alignr}${addr eth0}
+      External IP: ${alignr}${execi 10800 ~/dotfiles/bin/conkyip}
       Inbound $alignr ${downspeed eth0} kb/s
       Outbound $alignr ${upspeed eth0} kb/s
 

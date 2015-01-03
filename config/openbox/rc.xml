@@ -445,6 +445,15 @@
         <command>/home/spencer/bin/dbeaver/usr/share/dbeaver/dbeaver</command>
       </action>
     </keybind>
+    <keybind key="W-r">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>rosegarden</name>
+        </startupnotify>
+        <command>/usr/bin/rosegarden</command>
+      </action>
+    </keybind>
     <keybind key="W-Tab">
       <action name="ShowMenu">
         <menu>client-list-combined-menu</menu>

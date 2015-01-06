@@ -29,3 +29,7 @@ alias ftpserver-stop='sudo service vsftpd stop'
 alias p='cd ~/projects'
 alias d='cd ~/dotfiles'
 alias h='cd ~/'
+
+alias ircserver='sudo service charybdis start'
+alias ircserver-stop='sudo service charybdis stop'
+alias irc='irssi'

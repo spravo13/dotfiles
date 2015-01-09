@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 wmctrl -s 0; 
-/usr/bin/terminator --maximise --command="mutt";
+/usr/bin/gnome-terminal --load-config="/home/spencer/dotfiles/config/gnome-terminal/black-config" -e tmux -e mutt;
+

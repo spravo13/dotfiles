@@ -1,0 +1,21 @@
+#Written by GNOME Terminal 3.4.1.1
+
+[GNOME Terminal Configuration]
+Version=1
+CompatVersion=1
+Windows=Window0;
+
+[Window0]
+MenubarVisible=false
+Role=gnome-terminal-window-3826-365641718-1420763232
+Maximized=true
+ActiveTerminal=Terminal0x241e200
+Geometry=170x47+0+29
+Terminals=Terminal0x241e200;
+
+[Terminal0x241e200]
+ProfileID=Profile0
+WorkingDirectory=/home/spencer/dotfiles/config/gnome-terminal
+Zoom=1
+Width=170
+Height=47

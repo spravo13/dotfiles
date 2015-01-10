@@ -20,6 +20,7 @@ alias tconf='$EDITOR ~/dotfiles/tmux.conf'
 
 alias t='todoium'
 alias vncserver='/usr/lib/vino/vino-server'
+alias vnc='vncviewer'
 alias vncv='vncviewer'
 alias vncs='/usr/lib/vino/vino-server'
 alias ftpserver='sudo service vsftpd start'

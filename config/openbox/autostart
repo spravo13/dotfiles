@@ -74,7 +74,7 @@ conky -q &
 (ssh-add) &
 
 #restart cb-compositor
-(sleep 15s && cb-compositor --restart) &
+(sleep 30s && cb-compositor --restart) &
 
 #killirc
 (sleep 60s && sudo service charybdis stop) &

@@ -24,3 +24,6 @@ deb http://backports.debian.org/debian-backports squeeze-backports main
 
 #for unstable packages
 #   deb http://ftp.us.debian.org/debian sid main 
+
+
+deb     http://deb.torproject.org/torproject.org wheezy main

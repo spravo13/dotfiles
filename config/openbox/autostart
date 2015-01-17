@@ -78,3 +78,6 @@ conky -q &
 
 #killirc
 (sleep 60s && sudo service charybdis stop) &
+
+#mouse settings(speed)
+(xset m 7/5 1) &

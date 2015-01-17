@@ -44,10 +44,13 @@ vnoremap > >gv
 vnoremap < <gv
 
 " make capital w write
-nnoremap :W :w<CR>
+nnoremap W :w<CR>
 
 " make WW write
 nnoremap WW :w<CR>
+
+" changes until end of line and D deletes until end of line, so why not Y?
+noremap Y y$
 
 " status line{{{1
 function! InsertStatuslineColor(mode)

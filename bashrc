@@ -90,8 +90,6 @@ PS2="\$"
     # Add an "alert" alias for long running commands. Use like so:
     # sleep 10; alert
     alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-    # Alias definitions.
-    . ~/.bash_aliases
     # enable programmable completion features (you don't need to enable
     # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
     # sources /etc/bash.bashrc).
@@ -106,6 +104,7 @@ PS2="\$"
 # load other files
 source ~/dotfiles/bin/colors.sh
 source ~/dotfiles/bin/git-prompt.sh
+source ~/dotfiles/bash_aliases
 
 PATH="$HOME/bin:$PATH";
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

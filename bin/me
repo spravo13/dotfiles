@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-
 function wlan0 { /sbin/ifconfig wlan0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'; }
-
 me=$(wlan0)
-
 nmap $me

@@ -32,3 +32,5 @@ alias d='cd ~/dotfiles'
 alias h='cd ~/'
 
 alias irc='irssi'
+
+alias life='golly'

@@ -35,5 +35,5 @@ ignore "DKIM-Signature:"
 hdr_order Date From To Cc
 
 set timeout=15
-set mail_check=5
+set mail_check=60
 

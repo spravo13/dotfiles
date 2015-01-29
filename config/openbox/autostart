@@ -65,9 +65,9 @@ conky -q &
 (swapon /dev/sda2) &
 
 # autostart applications
-(sleep 5s && term-start) &
-(sleep 10s && mutt-start) &
-(sleep 15s && fire-start) &
+(sleep 10s && term-start) &
+(sleep 15s && mutt-start) &
+(sleep 20s && fire-start) &
 
 
 #start ssh

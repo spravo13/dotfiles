@@ -74,7 +74,7 @@ conky -q &
 (ssh-add) &
 
 #restart cb-compositor
-(sleep 30s && cb-compositor --restart) &
+(sleep 25s && cb-compositor --restart) &
 
 #killtor
 (sleep 60s && sudo service tor stop) &

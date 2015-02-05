@@ -5,7 +5,7 @@ set nocompatible
 set t_Co=256
 set tabstop=4               " fixes stupid million tab indent
 set softtabstop=4           " number of spaces in tab when editing
-set expandtab               " tabs are spaces
+"set expandtab               " tabs are spaces
 set smartindent
 syntax enable               " enable syntax processing
 " set noshowmode              " turn off "--INSERT--" at bottom of screen

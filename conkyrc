@@ -65,7 +65,6 @@
 
     ${alignc}   WIRED
       Local IP: ${alignr}${addr eth0}
-      External IP: ${alignr}${execi 10800 ~/dotfiles/bin/conkyip}
       Inbound $alignr ${downspeed eth0} kb/s
       Outbound $alignr ${upspeed eth0} kb/s
 
@@ -80,3 +79,4 @@
       ${top name 6} $alignr ${top pid 6} ${top cpu 6}
       ${top name 7} $alignr ${top pid 7} ${top cpu 7}
       ${top name 8} $alignr ${top pid 8} ${top cpu 8}
+      ${top name 9} $alignr ${top pid 9} ${top cpu 9}

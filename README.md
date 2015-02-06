@@ -1,4 +1,4 @@
-dotfiles
+Spencer's Dotfiles
 ========
 
 configuration files that I use to modify my Crunchbang computer to my liking. All changes I have made are to my own opinion of efficiency and looks, feel free to use and/or modify how you wish.

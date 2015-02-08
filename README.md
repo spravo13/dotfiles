@@ -10,18 +10,10 @@ First you have to download the files by using:
 	git clone git://github.com/spravo13/dotfiles.git ~/dotfiles
 
 After the files have been downloaded you need to link the files to where the
-system looks for them:
+system looks for them: (i.e.):
 
 	ln -s ~/dotfiles/vim ~/.vim
-	ln -s ~/dotfiles/vimrc ~/.vimrc
-	ln -s ~/dotfiles/bashrc ~/.bashrc
-	ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
-	ln -s ~/dotfiles/gitconfig ~/.gitconfig
-	ln -s ~/dotfiles/bin ~/bin
-	ln -s ~/dotfiles/config/clipit/ ~/.config/
-	ln -s ~/dotfiles/config/htop/ ~/.config/
-	ln -s ~/dotfiles/config/openbox/ ~/.config/
-	ln -s ~/dotfiles/config/terminator/ ~/.config/
+
 
 ## Contributing
 

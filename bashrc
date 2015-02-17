@@ -44,11 +44,11 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 cmd_check() {
-if [[ $? = 0 ]]; then
-    echo " ${Green}✓";
-else
-    echo " ${Red}✗";
-fi;
+	if [[ $? = 0 ]]; then
+		echo " ${Green}✓";
+	else
+		echo " ${Red}✗";
+	fi;
 }
 
 PS1='\

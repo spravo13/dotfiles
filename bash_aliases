@@ -1,7 +1,6 @@
 alias g="grep"
 alias ls="ls --color=auto"
 
-bind '"\t":menu-complete'
 alias sb='source ~/.bashrc'
 alias r='reset'
 alias ..='cd ..'
@@ -29,10 +28,7 @@ alias ftpserver-stop='sudo service vsftpd stop'
 
 alias p='cd ~/projects'
 alias d='cd ~/dotfiles'
-alias h='cd ~/'
 
 alias irc='irssi'
-
 alias life='golly'
-
 alias m='mutt'

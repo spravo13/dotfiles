@@ -83,6 +83,8 @@ PS2="\$"
         alias egrep='egrep --color=auto'
     fi
 
+	bind '"\t":menu-complete'
+
     alias ll='ls -alF'
     alias la='ls -A'
     alias al='ls -A'

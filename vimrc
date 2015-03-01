@@ -1,4 +1,5 @@
 syntax on
+syntax enable               " enable syntax processing
 set autoindent 
 set autowrite
 set nocompatible
@@ -6,7 +7,6 @@ set t_Co=256
 set tabstop=4               " fixes stupid million tab indent
 set softtabstop=4           " number of spaces in tab when editing
 set smartindent
-syntax enable               " enable syntax processing
 set showcmd                 " show command in bottom bar
 set showmatch               " highlight matching [{()}]
 set incsearch               " search as characters are entered

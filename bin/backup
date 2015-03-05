@@ -2,14 +2,17 @@
 
 date=$(date +%F);
 
-if [ ! -d "$HOME/MEGA/backups" ]; then
-	mkdir "$HOME/MEGA/backups";
-fi
+#if [ ! -d "$HOME/MEGA/backups" ]; then
+#	mkdir "$HOME/MEGA/backups";
+#fi
 
-if [ -d "$HOME/MEGA/backups/$date" ]; then
-	rm -rf "$HOME/MEGA/backups/$date";
-fi
+#if [ -d "$HOME/MEGA/backups/$date" ]; then
+#	rm -rf "$HOME/MEGA/backups/$date";
+#fi
 
-mkdir "$HOME/MEGA/backups/$date";
+#mkdir "$HOME/MEGA/backups/$date";
 
-rsync -av --delete --exclude "$HOME/MEGA/" --exclude "$HOME/Dropbox/" "$HOME/" "$HOME/MEGA/backups/$date/";
+
+#rsync -av --delete --exclude '/home/spencer/MEGA/' /home/spencer/ /home/spencer/MEGA/backups/$date/
+#rsync -au --delete --exclude={"/home/spencer/MEGA/*","/home/spencer/Dropbox/*","/home/spencer/.cache"} /home/spencer /home/spencer/MEGA/backups/home/
+rsync -au --delete --exclude={"/home/spencer/MEGA/*","/home/spencer/Dropbox/*","/home/spencer/.*"} /home/spencer /home/spencer/MEGA/backups

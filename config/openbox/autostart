@@ -58,7 +58,7 @@ conky -q &
 
 # Autostart the Dropbox deamon
 (sleep 30s && ~/.dropbox-dist/dropboxd) &
-(sleep 30s && megasync) &
+(sleep 50s && megasync) &
 
 
 # autostart swap
@@ -69,15 +69,11 @@ conky -q &
 (sleep 15s && mutt-start) &
 (sleep 20s && fire-start) &
 
-
 #start ssh
 (ssh-add) &
 
 #restart cb-compositor
 (sleep 25s && cb-compositor --restart) &
-
-#killtor
-(sleep 60s && sudo service tor stop) &
 
 #mouse settings(speed)
 (xset m 7/5 1) &

@@ -1,23 +1,23 @@
 [user]
-    email = spencer@codeshrub.com
-    name = Spencer Bravo
+	email = spencer@codeshrub.com
+	name = Spencer Bravo
 [github]
-    user = spravo13
+	user = spravo13
 [push]
-    default = matching
+	default = matching
 [help]
-    autocorrect = 1
+	autocorrect = 1
 [color]
-    ui = auto
-    diff = auto
-    status = auto
-    branch = auto
-    interactive = auto
-    grep = auto
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	grep = auto
 [alias]
-    ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative --since=last.mon
-    la = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
-    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-    l = "!git ll -1"
-    difflast = diff --cached HEAD^diffw = diff --word-diff
-    diffc = diff --cached
+	ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative --since=last.mon
+	la = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	l = "!git ll -1"
+	difflast = diff --cached HEAD^diffw = diff --word-diff
+	diffc = diff --cached

@@ -164,7 +164,8 @@ __git_ps1_show_upstream () {
 		local commits
 		if commits="$(git rev-list --left-right "$upstream"...HEAD 2>/dev/null)"; then
 			local commit behind=0 ahead=0
-			for commit in $commits do
+			for commit in $commits 
+			do
 				case "$commit" in
 					"<"*) ((behind++)) ;;
 					*) ((ahead++)) ;;

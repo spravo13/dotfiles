@@ -53,10 +53,10 @@ noremap Y y$
 " status line{{{1
 function! InsertStatuslineColor(mode)
 if a:mode == 'i'
-    hi statusline ctermfg=4 ctermbg=15
-    hi SLgreen ctermfg=0 ctermbg=4
-    hi SLblue ctermfg=0 ctermbg=4
-    hi SLcyan ctermfg=0 ctermbg=4
+	hi statusline ctermfg=black ctermbg=darkyellow
+	hi SLgreen ctermfg=black ctermbg=darkyellow
+	hi SLblue ctermfg=black ctermbg=darkyellow
+	hi SLcyan ctermfg=black ctermbg=darkyellow
 elseif a:mode == 'r'
     hi statusline ctermfg=9 ctermbg=15
     hi SLgreen ctermfg=0 ctermbg=9
@@ -67,7 +67,7 @@ else
 endif
 endfunction
 au InsertEnter * call InsertStatuslineColor(v:insertmode)
-au InsertLeave * hi statusline ctermfg=0 ctermbg=15
+au InsertLeave * hi statusline ctermfg=9 ctermbg=15
 au InsertLeave * hi SLgreen ctermfg=2 ctermbg=0
 au InsertLeave * hi SLblue ctermfg=4 ctermbg=0
 au InsertLeave * hi SLcyan ctermfg=6 ctermbg=0

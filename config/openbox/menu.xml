@@ -24,7 +24,7 @@
 		<item label="Web Browser">
 			<action name="Execute">
 				<command>
-				    ~/bin/firefox/firefox
+					~/bin/firefox/firefox
 				</command>
 			</action>
 		</item>
@@ -404,7 +404,7 @@
 						</command>
 					</action>
 				</item>
-                <item label="Restart tint2">
+				<item label="Restart tint2">
 					<action name="Execute">
 						<command>
 							tint2restart
@@ -428,21 +428,21 @@
 				</item>
 			</menu>
 			<menu id="DisplaySettings" label="Display Settings">
-			    <item label="ARandR Screen Layout Editor">
-				    <action name="Execute">
-					    <command>
-						    arandr
-					    </command>
-				    </action>
-			    </item>
-			    <separator label="Help?"/>
-			    <item label="man xrandr">
-				    <action name="Execute">
-					    <command>
+				<item label="ARandR Screen Layout Editor">
+					<action name="Execute">
+						<command>
+							arandr
+						</command>
+					</action>
+				</item>
+				<separator label="Help?"/>
+				<item label="man xrandr">
+					<action name="Execute">
+						<command>
 						    terminator --command="man xrandr"
-					    </command>
-				    </action>
-			    </item>
+						</command>
+					</action>
+				</item>
 			</menu>
 			<menu id="Notifications" label="Notifications">
 				<item label="settings">
@@ -488,8 +488,8 @@
 			</item>
 		</menu>
 		<menu id="system" label="System">
-		    <menu execute="cb-printing-pipemenu" id="PrintingPipeMenu" label="Printers"/>
-		    <item label="GParted">
+			<menu execute="cb-printing-pipemenu" id="PrintingPipeMenu" label="Printers"/>
+			<item label="GParted">
 				<action name="Execute">
 					<command>
 						gksudo gparted

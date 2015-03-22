@@ -51,34 +51,35 @@ nnoremap WW :w<CR>
 noremap Y y$
 
 " status line{{{1
-function! InsertStatuslineColor(mode)
-if a:mode == 'i'
-	hi statusline ctermfg=black ctermbg=lightred
-	hi SLgreen ctermfg=black ctermbg=lightred
-	hi SLblue ctermfg=black ctermbg=lightred
-	hi SLcyan ctermfg=black ctermbg=lightred
-elseif a:mode == 'r'
-    hi statusline ctermfg=9 ctermbg=15
-    hi SLgreen ctermfg=0 ctermbg=9
-    hi SLblue ctermfg=0 ctermbg=9
-    hi SLcyan ctermfg=0 ctermbg=9
-else
-    hi statusline ctermfg=0 ctermbg=15
-endif
-endfunction
-au InsertEnter * call InsertStatuslineColor(v:insertmode)
-au InsertLeave * hi statusline ctermfg=9 ctermbg=15
-au InsertLeave * hi SLgreen ctermfg=2 ctermbg=0
-au InsertLeave * hi SLblue ctermfg=4 ctermbg=0
-au InsertLeave * hi SLcyan ctermfg=6 ctermbg=0
-hi statusline ctermfg=0 ctermbg=15
-hi SLgreen ctermfg=2 ctermbg=0
-hi SLblue ctermfg=4 ctermbg=0
-hi SLcyan ctermfg=6 ctermbg=0
-set statusline=%#SLblue#%f " file name
-set statusline+=%#SLgreen#\ %Y " filetype
-set statusline+=%#SLcyan#\ %M " modified flag
-set statusline+=\ %= " align left
-set statusline+=%#SLcyan#%c " column
-set statusline+=%#SLgreen#\ %p%% " percent of file
-set statusline+=%#SLblue#\ %l/%L " line/total lines
+	function! InsertStatuslineColor(mode)
+	if a:mode == 'i'
+		hi statusline ctermfg=black ctermbg=lightred
+		hi SLgreen ctermfg=black ctermbg=lightred
+		hi SLblue ctermfg=black ctermbg=lightred
+		hi SLcyan ctermfg=black ctermbg=lightred
+	elseif a:mode == 'r'
+		hi statusline ctermfg=9 ctermbg=15
+		hi SLgreen ctermfg=0 ctermbg=9
+		hi SLblue ctermfg=0 ctermbg=9
+		hi SLcyan ctermfg=0 ctermbg=9
+	else
+		hi statusline ctermfg=0 ctermbg=15
+	endif
+	endfunction
+	au InsertEnter * call InsertStatuslineColor(v:insertmode)
+	au InsertLeave * hi statusline ctermfg=9 ctermbg=15
+	au InsertLeave * hi SLgreen ctermfg=2 ctermbg=0
+	au InsertLeave * hi SLblue ctermfg=4 ctermbg=0
+	au InsertLeave * hi SLcyan ctermfg=6 ctermbg=0
+	hi statusline ctermfg=0 ctermbg=15
+	hi SLgreen ctermfg=2 ctermbg=0
+	hi SLblue ctermfg=4 ctermbg=0
+	hi SLcyan ctermfg=6 ctermbg=0
+	set statusline=%#SLblue#%f " file name
+	set statusline+=%#SLgreen#\ %Y " filetype
+	set statusline+=%#SLcyan#\ %M " modified flag
+	set statusline+=\ %= " align left
+	set statusline+=%#SLcyan#%c " column
+	set statusline+=%#SLgreen#\ %p%% " percent of file
+	set statusline+=%#SLblue#\ %l/%L " line/total lines
+" }}}

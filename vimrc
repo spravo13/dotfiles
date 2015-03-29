@@ -23,6 +23,10 @@ set list
 set listchars=tab:\|\ ,eol:¬,extends:❯,precedes:❮
 set t_ut=                   " needed if using Vim inside of tmux
 
+" add pathogen
+execute pathogen#infect()
+
+
 " make line numbers go 1,2,3,4...
 set number
 
@@ -53,10 +57,10 @@ noremap Y y$
 " status line{{{1
 	function! InsertStatuslineColor(mode)
 	if a:mode == 'i'
-		hi statusline ctermfg=black ctermbg=lightred
-		hi SLgreen ctermfg=black ctermbg=lightred
-		hi SLblue ctermfg=black ctermbg=lightred
-		hi SLcyan ctermfg=black ctermbg=lightred
+		hi statusline ctermfg=black ctermbg=darkyellow
+		hi SLgreen ctermfg=black ctermbg=darkyellow
+		hi SLblue ctermfg=black ctermbg=darkyellow
+		hi SLcyan ctermfg=black ctermbg=darkyellow
 	elseif a:mode == 'r'
 		hi statusline ctermfg=9 ctermbg=15
 		hi SLgreen ctermfg=0 ctermbg=9

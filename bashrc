@@ -6,8 +6,11 @@ fi
 # stuff{{{1
 # If not running interactively, don't do anything
 case $- in
-*i*) ;;
-*) return;;
+	*i*) 
+	;;
+	*) 
+		return
+	;;
 esac
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
@@ -109,7 +112,6 @@ source ~/dotfiles/bin/git-prompt.sh
 source ~/dotfiles/bash_aliases
 
 PATH="$HOME/bin:$PATH";
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 #tmux config for history
 export PROMPT_COMMAND="history -a"

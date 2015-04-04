@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+wmctrl -s 0; 
+icedove;
+

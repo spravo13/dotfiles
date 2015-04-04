@@ -23,6 +23,7 @@ set editor='vim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "?^$"'
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
 set certificate_file=~/.mutt/certificates
+#set signature="~/.mutt-signature"
 
 set smart_wrap = yes
 set sort = 'threads'

@@ -66,7 +66,7 @@ conky -q &
 
 # autostart applications
 (sleep 10s && term-start) &
-(sleep 15s && mutt-start) &
+(sleep 15s && mail-start) &
 (sleep 20s && fire-start) &
 
 #start ssh

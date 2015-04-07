@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 syntax on
 syntax enable               " enable syntax processing
 set autoindent 
@@ -22,10 +24,6 @@ set scrolloff=7             " make Vim have 7 lines below cursor when moving dow
 set list
 set listchars=tab:\|\ ,eol:¬,extends:❯,precedes:❮
 set t_ut=                   " needed if using Vim inside of tmux
-
-" add pathogen
-execute pathogen#infect()
-
 
 " make line numbers go 1,2,3,4...
 set number

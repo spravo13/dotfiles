@@ -55,7 +55,7 @@ cmd_check() {
 }
 
 PS1='\
-${BIGreen}\u: ${IWhite}\W\
+${BIGreen}\u:${IWhite}\
 $(cmd_check) \
 $(__git_ps1 "${Cyan}%s ")${Yellow}\
 \$${Color_Off} \

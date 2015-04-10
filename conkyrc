@@ -18,8 +18,8 @@
     draw_graph_borders yes
     default_color white
     alignment top_right
-    gap_x 9
-    gap_y 33
+    gap_x 10
+    gap_y 40
     no_buffers yes
     uppercase no
     cpu_avg_samples 2

@@ -25,6 +25,9 @@ set list
 set listchars=tab:\|\ ,eol:¬,extends:❯,precedes:❮
 set t_ut=                   " needed if using Vim inside of tmux
 
+" for ragtag.vim 
+let g:ragtag_global_maps = 1 
+
 " make line numbers go 1,2,3,4...
 set number
 

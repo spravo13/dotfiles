@@ -27,3 +27,5 @@ deb http://backports.debian.org/debian-backports squeeze-backports main
 
 
 deb     http://deb.torproject.org/torproject.org wheezy main
+deb http://ppa.launchpad.net/kilian/f.lux/ubuntu lucid main
+deb http://ppa.launchpad.net/kilian/f.lux/ubuntu lucid main

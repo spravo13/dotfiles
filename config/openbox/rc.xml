@@ -39,9 +39,9 @@
 			'Active' - where the active window is -->
   </placement>
   <theme>
-    <!--<name>Carbon</name>-->
+    <name>Carbon</name>
     <!--<name>Coder_ob</name>-->
-    <name>Slip_ob</name>
+    <!--<name>Slip_ob</name>-->
     <titleLayout>DSLIMC</titleLayout>
     <!--
 			 avaible characters are NDSLIMC, each can occur at most once.

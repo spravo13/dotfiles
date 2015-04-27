@@ -1,31 +1,26 @@
-## CRUNCHBANG
-## Compatible with Debian Wheezy, but use at your own risk.
-deb http://packages.crunchbang.org/waldorf waldorf main
-
-### for downloading source code
-#    deb-src http://packages.crunchbang.org/waldorf waldorf main
-###
-
 ## DEBIAN
-deb http://http.debian.net/debian wheezy main contrib non-free
-
-### for downloading source code
-#    deb-src http://http.debian.net/debian wheezy main contrib non-free
-###
+	deb http://http.debian.net/debian wheezy main contrib non-free
 
 ## DEBIAN SECURITY
-deb http://security.debian.org/ wheezy/updates main
+	deb http://security.debian.org/ wheezy/updates main
 
-### for downloading source code
-#    deb-src http://security.debian.org/ wheezy/updates main
-###
+## for tor
+	deb http://deb.torproject.org/torproject.org wheezy main
 
-deb http://backports.debian.org/debian-backports squeeze-backports main
-
-#for unstable packages
-#   deb http://ftp.us.debian.org/debian sid main 
+## others
+	deb http://backports.debian.org/debian-backports squeeze-backports main
 
 
-deb     http://deb.torproject.org/torproject.org wheezy main
-deb http://ppa.launchpad.net/kilian/f.lux/ubuntu lucid main
-deb http://ppa.launchpad.net/kilian/f.lux/ubuntu lucid main
+## for downloading source code
+#    	deb-src http://http.debian.net/debian wheezy main contrib non-free
+#  	deb-src http://security.debian.org/ wheezy/updates main
+##
+
+## for unstable packages
+#    	deb http://ftp.us.debian.org/debian sid main 
+##
+
+## for downloading source code
+#    	deb-src http://packages.crunchbang.org/waldorf waldorf main
+##
+

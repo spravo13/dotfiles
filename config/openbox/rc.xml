@@ -39,7 +39,7 @@
 			'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Carbon</name>
+    <name>Onyx</name>
     <!--<name>Coder_ob</name>-->
     <!--<name>Slip_ob</name>-->
     <titleLayout>DSLIMC</titleLayout>

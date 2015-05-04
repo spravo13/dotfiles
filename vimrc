@@ -107,3 +107,5 @@ noremap Y y$
 	set statusline+=%#SLgreen#\ %p%% " percent of file
 	set statusline+=%#SLblue#\ %l/%L " line/total lines
 " }}}
+
+silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)

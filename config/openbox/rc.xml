@@ -364,7 +364,7 @@
           <enabled>true</enabled>
           <name>Terminal</name>
         </startupnotify>
-        <command>/usr/bin/gnome-terminal</command>
+        <command>terminator --command=tmux</command>
       </action>
     </keybind>
     <keybind key="W-w">

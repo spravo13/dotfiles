@@ -17,7 +17,7 @@
 		<item label="Terminal">
 			<action name="Execute">
 				<command>
-					gnome-terminal
+					terminator
 				</command>
 			</action>
 		</item>

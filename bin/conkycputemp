@@ -1,2 +1,2 @@
 #!/bin/bash
-sensors | sed -n 3p | cut -c 16-19
+sensors | sed -n 7p | cut -c 15-19

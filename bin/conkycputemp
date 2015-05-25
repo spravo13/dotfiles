@@ -1,0 +1,2 @@
+#!/bin/bash
+sensors | sed -n 3p | cut -c 16-19

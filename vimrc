@@ -25,6 +25,11 @@ set list
 set listchars=tab:\|\ ,eol:¬,extends:❯,precedes:❮
 set t_ut=                   " needed if using Vim inside of tmux
 
+" colorscheme transparent
+" colorscheme ir_black
+colorscheme desert
+" colorscheme twilight
+
 " save line number line when reopening file
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif

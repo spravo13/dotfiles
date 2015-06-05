@@ -1,3 +1,25 @@
 #!/usr/bin/env bash
-function wlan0 { /sbin/ifconfig wlan0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'; }
-nmap $(wlan0) 127.0.0.1
+
+unset eth0_fn
+unset wlan0_fn
+
+ifconfig eth0 &> "/dev/null"
+if [[ $? == 0 ]]; then
+	function eth0() { /sbin/ifconfig eth0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'; };
+	eth0_fn="yes";
+fi
+ifconfig wlan0 &> "/dev/null"
+if [[ $? == 0 ]]; then
+	function wlan0 { /sbin/ifconfig wlan0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'; };
+	wlan0_fn="yes";
+fi
+
+
+if [[ $eth0_fn == "yes" && $wlan0_fn == "yes" ]]; then
+	nmap $(eth0) $(wlan0) 127.0.0.1
+elif [[ $eth0_fn == "yes" && $wlan0_fn == "" ]]; then
+	nmap $(eth0) 127.0.0.1
+elif [[ $eth0_fn == "" && $wlan0_fn == "yes" ]]; then
+	nmap $(wlan0) 127.0.0.1
+fi
+

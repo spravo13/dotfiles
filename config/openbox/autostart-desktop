@@ -71,9 +71,6 @@ xset b off &
 ## Run the conky
 conky -q &
 
-# autostart swap
-(swapon /dev/sda2) &
-
 # autostart applications
 (sleep 5s && term-start) &
 (sleep 7s && mail-start) &
@@ -81,9 +78,6 @@ conky -q &
 
 #start ssh
 (ssh-add) &
-
-#restart cb-compositor
-(sleep 25s && cbpp-compositor --restart) &
 
 #mouse settings(speed)
 (xset m 7/5 1) &

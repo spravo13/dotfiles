@@ -45,9 +45,12 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-let g:syntastic_python_python_exec = "/usr/local/bin/python3.4"
+" let g:syntastic_python_python_exec = "/usr/bin/python3.4"
 
 let g:syntastic_html_checkers = ['w3']
+
+let g:syntastic_php_phpcs_args='--tab-width=0'
+set tabstop=8
 
 " for ragtag.vim 
 let g:ragtag_global_maps = 1 

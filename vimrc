@@ -6,8 +6,8 @@ set autoindent
 set autowrite
 set nocompatible
 set t_Co=256
-set tabstop=4               " fixes stupid million tab indent
-set softtabstop=4           " number of spaces in tab when editing
+" set tabstop=4               " fixes stupid million tab indent
+" set softtabstop=4           " number of spaces in tab when editing
 set smartindent
 set showcmd                 " show command in bottom bar
 set showmatch               " highlight matching [{()}]
@@ -50,7 +50,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_html_checkers = ['w3']
 
 let g:syntastic_php_phpcs_args='--tab-width=0'
-set tabstop=8
+"set tabstop=8
 
 " for ragtag.vim 
 let g:ragtag_global_maps = 1 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <openbox_menu xmlns="http://openbox.org/"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://openbox.org/
-	file:///usr/share/openbox/menu.xsd">
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
 
 	<menu id="root-menu" label="Openbox 3">
 		<item label="Run Program">
@@ -17,14 +17,14 @@
 		<item label="Terminal">
 			<action name="Execute">
 				<command>
-					terminator
+					x-terminal-emulator
 				</command>
 			</action>
 		</item>
 		<item label="Web Browser">
 			<action name="Execute">
 				<command>
-					~/bin/firefox/firefox
+					x-www-browser
 				</command>
 			</action>
 		</item>
@@ -74,13 +74,13 @@
 			</item>
 			<item label="Task Manager (htop)">
 				<action name="Execute">
-					<command>terminator --command=&quot;htop&quot;</command>
+					<command>x-terminal-emulator -e htop</command>
 				</action>
 			</item>
-			<item label="Terminator Terminal">
+			<item label="Terminal">
 				<action name="Execute">
 					<command>
-						terminator
+						x-terminal-emulator
 					</command>
 				</action>
 			</item>
@@ -177,11 +177,18 @@
 			</item>
 		</menu>
 		<menu id="network" label="Network">
-		    <menu execute="cb-x-www-browser-pipemenu" id="wwwbrowsers" label="WWW Browsers"/>
-			<item label="gFTP Client">
+		    <menu execute="cbpp-x-www-browser-pipemenu" id="wwwbrowsers" label="WWW Browsers"/>
+			<item label="gftp">
 				<action name="Execute">
 					<command>
 						gftp
+					</command>
+				</action>
+			</item>
+			<item label="dbeaver">
+				<action name="Execute">
+					<command>
+						dbeaver
 					</command>
 				</action>
 			</item>
@@ -192,10 +199,10 @@
 					</command>
 				</action>
 			</item>
-			<item label="XChat IRC Client">
+			<item label="HexChat IRC Client">
 				<action name="Execute">
 					<command>
-						xchat
+						hexchat
 					</command>
 				</action>
 			</item>
@@ -206,20 +213,13 @@
 					</command>
 				</action>
 			</item>
-			<item label="SQL-Client">
-				<action name="Execute">
-					<command>
-						/home/spencer/bin/dbeaver/usr/share/dbeaver/dbeaver
-					</command>
-				</action>
-			</item>
-			<menu execute="cb-remote-desktop-pipemenu" id="remotedesktop" label="Remote Desktop"/>
-			<menu execute="cb-sshconfig-pipemenu" id="sshconfig" label="SSH"/>
+			<menu execute="cbpp-remote-desktop-pipemenu" id="remotedesktop" label="Remote Desktop"/>
+			<menu execute="cbpp-sshconfig-pipemenu" id="sshconfig" label="SSH"/>
 			<separator label="Services"/>
-			<menu execute="cb-dropbox-pipemenu" id="dropbox" label="Dropbox"/>
+			<menu execute="cbpp-dropbox-pipemenu" id="dropbox" label="Dropbox"/>
 		</menu>
 		<menu id="office" label="Office">
-		    <menu id="libreoffice" label="LibreOffice" execute="cb-libreoffice-pipemenu" />
+		    <menu id="libreoffice" label="LibreOffice" execute="cbpp-libreoffice-pipemenu" />
 		    <item label="Google Docs">
 				<action name="Execute">
 					<command>
@@ -248,20 +248,20 @@
 					</command>
 				</action>
 			</item>
-			<item label="Evince PDF Viewer">
+			<item label="Atril PDF Viewer">
 				<action name="Execute">
 					<command>
-						evince
+						atril
 					</command>
 				</action>
 			</item>
 		</menu>
 		<separator/>
-		<menu execute="cb-places-pipemenu" id="pipe-placesmenu" label="Places"/>
-		<menu execute="cb-recent-files-pipemenu" id="pipe-recentfilesmenu" label="Recent Files"/>
+		<menu execute="cbpp-places-pipemenu" id="pipe-placesmenu" label="Places"/>
+		<menu execute="cbpp-recent-files-pipemenu" id="pipe-recentfilesmenu" label="Recent Files"/>
 		<separator/>
 		<menu id="settings" label="Settings">
-			<menu execute="cb-compositor" id="CompositingPipeMenu" label="Compositor"/>
+			<menu execute="cbpp-compositor" id="CompositingPipeMenu" label="Compositor"/>
 			<menu id="conkyconfig" label="Conky">
 				<item label="Edit .conkyrc">
 					<action name="Execute">
@@ -281,14 +281,14 @@
 				<item label="man page">
 					<action name="Execute">
 						<command>
-							terminator --command="man conky"
+							x-terminal-emulator -e man conky
 						</command>
 					</action>
 				</item>
-				<item label="Wiki Page">
+				<item label="Documentation">
 					<action name="Execute">
 						<command>
-							x-www-browser http://crunchbanglinux.org/wiki/conky
+							x-www-browser http://conky.sourceforge.net/documentation.html
 						</command>
 					</action>
 				</item>
@@ -305,7 +305,7 @@
 				<item label="man page">
 					<action name="Execute">
 						<command>
-							terminator --command="man dmenu"
+							x-terminal-emulator -e man dmenu
 						</command>
 					</action>
 				</item>
@@ -322,7 +322,7 @@
 				<item label="man page">
 					<action name="Execute">
 						<command>
-							terminator --command="man gmrun"
+							x-terminal-emulator -e man gmrun
 						</command>
 					</action>
 				</item>
@@ -379,23 +379,6 @@
 					<action name="Restart"/>
 				</item>
 			</menu>
-			<menu id="terminatorconfig" label="Terminator">
-				<item label="Edit config file">
-					<action name="Execute">
-						<command>
-							geany ~/.config/terminator/config
-						</command>
-					</action>
-				</item>
-				<separator label="Help?"/>
-				<item label="man page">
-					<action name="Execute">
-						<command>
-							terminator --command="man terminator_config"
-						</command>
-					</action>
-				</item>
-			</menu>
 			<menu id="tint2config" label="tint2">
 				<item label="Edit config file">
 					<action name="Execute">
@@ -404,7 +387,7 @@
 						</command>
 					</action>
 				</item>
-				<item label="Restart tint2">
+                <item label="Restart tint2">
 					<action name="Execute">
 						<command>
 							tint2restart
@@ -415,7 +398,7 @@
 				<item label="man page">
 					<action name="Execute">
 						<command>
-							terminator --command="man tint2"
+							x-terminal-emulator -e man tint2
 						</command>
 					</action>
 				</item>
@@ -428,21 +411,21 @@
 				</item>
 			</menu>
 			<menu id="DisplaySettings" label="Display Settings">
-				<item label="ARandR Screen Layout Editor">
-					<action name="Execute">
-						<command>
-							arandr
-						</command>
-					</action>
-				</item>
-				<separator label="Help?"/>
-				<item label="man xrandr">
-					<action name="Execute">
-						<command>
-						    terminator --command="man xrandr"
-						</command>
-					</action>
-				</item>
+			    <item label="ARandR Screen Layout Editor">
+				    <action name="Execute">
+					    <command>
+						    arandr
+					    </command>
+				    </action>
+			    </item>
+			    <separator label="Help?"/>
+			    <item label="man xrandr">
+				    <action name="Execute">
+					    <command>
+						    x-terminal-emulator -e man xrandr
+					    </command>
+				    </action>
+			    </item>
 			</menu>
 			<menu id="Notifications" label="Notifications">
 				<item label="settings">
@@ -454,7 +437,7 @@
 			<item label="Edit Default Applications">
 				<action name="Execute">
 					<command>
-						terminator --command="sudo update-alternatives --all"
+						x-terminal-emulator -e sudo update-alternatives --all
 					</command>
 				</action>
 			</item>
@@ -468,7 +451,7 @@
 			<item label="Power Management">
 				<action name="Execute">
 					<command>
-						xfce4-power-manager-settings
+						mate-power-preferences
 					</command>
 				</action>
 			</item>
@@ -488,8 +471,8 @@
 			</item>
 		</menu>
 		<menu id="system" label="System">
-			<menu execute="cb-printing-pipemenu" id="PrintingPipeMenu" label="Printers"/>
-			<item label="GParted">
+		    <menu execute="cbpp-printing-pipemenu" id="PrintingPipeMenu" label="Printers"/>
+		    <item label="GParted">
 				<action name="Execute">
 					<command>
 						gksudo gparted
@@ -503,27 +486,20 @@
 					</command>
 				</action>
 			</item>
-			<item label="User Login Settings">
-				<action name="Execute">
-					<command>
-						gksudo slimconf
-					</command>
-				</action>
-			</item>
 		</menu>
-		<!--<menu id="help" label="Help" execute="cb-help-pipemenu" />-->
+		<!--<menu id="help" label="Help" execute="cbpp-help-pipemenu" />-->
 		<separator/>
 		<item label="Lock Screen">
 			<action name="Execute">
 				<command>
-					cb-lock
+					xscreensaver-command -lock
 				</command>
 			</action>
 		</item>
 		<item label="Exit">
 			<action name="Execute">
 				<command>
-					cb-exit
+					cbpp-exit
 				</command>
 			</action>
 		</item>

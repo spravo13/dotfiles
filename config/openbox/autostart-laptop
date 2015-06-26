@@ -14,7 +14,7 @@ hsetroot -solid "#2E3436" &
 ## 4. tint2 panel
 (\
 nitrogen --restore && \
-cb-compositor --start && \
+cbpp-compositor --start && \
 sleep 2s && \
 tint2 \
 ) &
@@ -66,14 +66,13 @@ conky -q &
 
 # autostart applications
 (sleep 10s && term-start) &
-(sleep 15s && mail-start) &
-(sleep 20s && fire-start) &
+(sleep 15s && fire-start) &
 
 #start ssh
 (ssh-add) &
 
 #restart cb-compositor
-(sleep 25s && cb-compositor --restart) &
+(sleep 25s && cbpp-compositor --restart) &
 
 #mouse settings(speed)
 (xset m 7/5 1) &

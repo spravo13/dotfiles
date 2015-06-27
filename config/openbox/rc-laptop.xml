@@ -42,7 +42,7 @@
   <theme>
     <!-- <name>CBPP</name> -->
     <name>Onyx</name>
-      <!--<name>Coder_ob</name>-->
+    <!--<name>Coder_ob</name>-->
     <!--<name>Slip_ob</name>-->
     <titleLayout>DSLIMC</titleLayout>
     <!--
@@ -466,6 +466,15 @@
           <name>tor</name>
         </startupnotify>
         <command>/home/spencer/bin/tor/start-tor-browser</command>
+      </action>
+    </keybind>
+    <keybind key="W-r">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>restart-cbppc</name>
+        </startupnotify>
+        <command>cbpp-compositor --restart</command>
       </action>
     </keybind>
     <!-- Keybindings for window tiling -->

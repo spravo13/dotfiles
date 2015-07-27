@@ -49,9 +49,6 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_html_checkers = ['w3']
 
-let g:syntastic_php_phpcs_args='--tab-width=0'
-"set tabstop=8
-
 " for ragtag.vim 
 let g:ragtag_global_maps = 1 
 

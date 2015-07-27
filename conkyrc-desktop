@@ -50,7 +50,9 @@
 
     CPU ${hr 2}
       Frequency: ${alignr} ${freq_g}
+      Percent Usage: $alignr ${cpu cpu0}%
       Tempurature: ${alignr} ${alignr}${execi 3 ~/dotfiles/bin/conkycputemp}C
+      Load Average: $alignr $loadavg
       ${cpugraph cpu0}GHz
       CPU 1: $alignr ${cpu cpu1}%
       CPU 2: $alignr ${cpu cpu2}%
@@ -92,5 +94,3 @@
       ${top name 8} $alignr ${top pid 8} ${top cpu 8}
       ${top name 9} $alignr ${top pid 9} ${top cpu 9}
       ${top name 10} $alignr ${top pid 10} ${top cpu 10}
-
-

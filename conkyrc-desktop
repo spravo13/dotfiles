@@ -49,8 +49,8 @@
     ${fs_bar /home/}
 
     CPU ${hr 2}
-      Frequency: ${alignr} ${freq_g}
       Percent Usage: $alignr ${cpu cpu0}%
+      Frequency: ${alignr} ${freq_g}
       Tempurature: ${alignr} ${alignr}${execi 3 ~/dotfiles/bin/conkycputemp}C
       Load Average: $alignr $loadavg
       ${cpugraph cpu0}GHz

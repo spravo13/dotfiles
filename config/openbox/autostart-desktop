@@ -51,10 +51,11 @@ mate-power-manager &
 thunar --daemon &
 
 ## Detect and configure touchpad. See 'man synclient' for more info.
-if egrep -iq 'touchpad' /proc/bus/input/devices; then
-    synclient VertEdgeScroll=1 TapButton1=1 &
-fi
-
+###Commented out because my desktop doesnt have a touchpad -SSB 06/29/15###
+#if egrep -iq 'touchpad' /proc/bus/input/devices; then
+#    synclient VertEdgeScroll=1 TapButton1=1 &
+#fi
+######
 ## Start xscreensaver
 xscreensaver -no-splash &
 
@@ -72,12 +73,12 @@ xset b off &
 conky -q &
 
 # autostart applications
-(sleep 5s && term-start) &
-(sleep 7s && mail-start) &
-(sleep 12s && fire-start) &
+(sleep 4s && term-start) &
+(sleep 6s && mail-start) &
+(sleep 10s && fire-start) &
 
 #start ssh
-(ssh-add) &
+#(ssh-add) &
 
 #mouse settings(speed)
 (xset m 7/5 1) &

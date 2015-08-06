@@ -376,6 +376,15 @@
         <command>~/bin/firefox/firefox</command>
       </action>
     </keybind>
+    <keybind key="W-o">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Opera</name>
+        </startupnotify>
+        <command>/usr/bin/opera</command>
+      </action>
+    </keybind>
     <keybind key="W-l">
       <action name="Execute">
         <startupnotify>

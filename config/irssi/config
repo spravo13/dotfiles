@@ -274,3 +274,4 @@ settings = {
   "fe-text" = { actlist_sort = "refnum"; };
 };
 hilights = ( );
+scroll = ON;

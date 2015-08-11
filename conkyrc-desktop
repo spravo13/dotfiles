@@ -70,8 +70,8 @@
     ${alignc}   WIRED
       Local IP: ${alignr}${addr eth0}
       External IP: ${alignr} ${alignr}${execi 10800 ~/dotfiles/bin/conkyip}
-      Inbound: $alignr ${downspeed eth0} kb/s
-      Outbound: $alignr ${upspeed eth0} kb/s
+      Inbound: $alignr ${downspeed eth0}/s
+      Outbound: $alignr ${upspeed eth0}/s
     
     Disks ${hr 2}
     ${alignc}   SSD

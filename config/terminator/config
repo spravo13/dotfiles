@@ -1,5 +1,6 @@
 [global_config]
   title_transmit_bg_color = "#000000"
+  suppress_multiple_term_dialog = True
   title_inactive_bg_color = "#000000"
 [keybindings]
   hide_window = <Shift><Control>a

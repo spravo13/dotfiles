@@ -24,7 +24,7 @@
 		<item label="Web Browser">
 			<action name="Execute">
 				<command>
-					~/bin/firefox/firefox
+					/usr/bin/firefox
 				</command>
 			</action>
 		</item>

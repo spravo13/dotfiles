@@ -373,7 +373,7 @@
           <enabled>true</enabled>
           <name>Web Browser</name>
         </startupnotify>
-        <command>~/bin/firefox/firefox</command>
+        <command>/usr/bin/firefox</command>
       </action>
     </keybind>
     <keybind key="W-o">

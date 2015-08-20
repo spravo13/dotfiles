@@ -6,4 +6,4 @@ fi
 
 sensor_line="$(grep -n temp1 /tmp/sensor_output | cut -c 1)p"
 
-sensors | sed -n $sensor_line | cut -c 15-19;
+sensors | sed -n "$sensor_line" | cut -c 15-19;

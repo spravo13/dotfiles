@@ -33,3 +33,4 @@ alias irc='irssi'
 alias life='golly'
 alias m='mutt'
 alias speedtest='speedtest-cli'
+

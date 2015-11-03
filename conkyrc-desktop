@@ -93,9 +93,10 @@
     Stocks ${hr 2}
       YUM  $alignr ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=YUM&f=a'}           ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=YUM&f=c1' | sed s/\"//g}
       RHT  $alignr ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=RHT&f=a'}           ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=RHT&f=c1' | sed s/\"//g}
-      INTC $alignr ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=INTC&f=a'}           ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=INTC&f=c1' | sed s/\"//g}
+      BOX  $alignr ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=BOX&f=a'}           ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=BOX&f=c1' | sed s/\"//g}
       AMD  $alignr ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=AMD&f=a'}           ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=AMD&f=c1' | sed s/\"//g}
       VIMC $alignr ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=VIMC&f=a'}           ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=VIMC&f=c1' | sed s/\"//g}
-      COKE $alignr ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=COKE&f=a'}           ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=COKE&f=c1' | sed s/\"//g}
+      AEZS $alignr ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=AEZS&f=a'}        ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=AEZS&f=c1' | sed s/\"//g}
+      COKE $alignr ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=COKE&f=a'}            ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=COKE&f=c1' | sed s/\"//g}
       DIS  $alignr ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=DIS&f=a'}           ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=DIS&f=c1' | sed s/\"//g}
-      MCD  $alignr ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=MCD&f=a'}           ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=MCD&f=c1' | sed s/\"//g}
+      MCD  $alignr ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=MCD&f=a'}            ${execi 60 curl -s 'http://download.finance.yahoo.com/d/quotes.csv?s=MCD&f=c1' | sed s/\"//g}

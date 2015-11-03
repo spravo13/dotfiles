@@ -19,7 +19,7 @@ set title
 set ttyfast                 " makes Vim faster
 set backspace=indent,eol,start
 set laststatus=2            " always turn on status line
-set cryptmethod=blowfish    " change the way Vim encrypts files to blowfish from zip
+set cryptmethod=blowfish2    " change the way Vim encrypts files to blowfish from zip
 set scrolloff=7             " make Vim have 7 lines below cursor when moving down
 set list
 set listchars=tab:\|\ ,eol:¬,extends:❯,precedes:❮

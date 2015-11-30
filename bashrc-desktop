@@ -116,3 +116,9 @@ PATH="$HOME/bin:$PATH";
 #tmux config for history
 export PROMPT_COMMAND="history -a"
 shopt -s histappend
+
+#added for pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+

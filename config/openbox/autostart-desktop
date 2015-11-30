@@ -86,3 +86,6 @@ conky -q &
 #cloud
 (sleep 15s && dropbox start)
 (sleep 20s && megasync)
+
+## Gnome Pie
+gnome-pie &

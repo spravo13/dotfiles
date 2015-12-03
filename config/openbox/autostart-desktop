@@ -88,4 +88,4 @@ conky -q &
 (sleep 20s && megasync)
 
 ## Gnome Pie
-gnome-pie &
+(sleep 5s && gnome-pie) &

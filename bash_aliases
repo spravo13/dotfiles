@@ -23,3 +23,4 @@ alias irc='irssi'
 
 alias p='cd ~/projects'
 alias d='cd ~/dotfiles'
+alias john='/usr/local/share/john-1.8.0-jumbo-1/run/john'

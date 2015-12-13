@@ -27,7 +27,7 @@ set t_ut=                   " needed if using Vim inside of tmux
 
 " colorscheme transparent
 " colorscheme ir_black
-colorscheme desert
+ colorscheme desert
 " colorscheme twilight
 
 " save line number line when reopening file

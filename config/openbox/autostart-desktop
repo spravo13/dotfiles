@@ -39,7 +39,7 @@ tint2 \
 (sleep 2s && pnmixer) &
 
 ## Start nm-applet for systray
-nm-applet &
+# nm-applet &
 
 ## Volume keys daemon
 xfce4-volumed &
@@ -84,8 +84,8 @@ conky -q &
 (xset m 7/5 1) &
 
 #cloud
-(sleep 15s && dropbox start)
-(sleep 20s && megasync)
+(sleep 15s && dropbox start) &
+(sleep 20s && megasync) &
 
 ## Gnome Pie
 (sleep 5s && gnome-pie) &

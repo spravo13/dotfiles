@@ -55,10 +55,10 @@ cmd_check() {
 }
 
 PS1='\
-${BIPurple}\u: ${IWhite}\W\
-$(cmd_check) \
-$(__git_ps1 "${Cyan}%s ")${Yellow}\
-\$${Color_Off} \
+\[${BIPurple}\]\u: \[${IWhite}\]\W\
+\[$(cmd_check)\] \
+\[$(__git_ps1 "\[${Cyan}\]%s ")\]\[${Yellow}\]\
+\$\[${Color_Off}\] \
 '
 
 PS2="\$"

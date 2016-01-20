@@ -376,6 +376,15 @@
         <command>/usr/bin/x-www-browser</command>
       </action>
     </keybind>
+    <keybind key="W-c">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Calculator</name>
+        </startupnotify>
+        <command>/usr/bin/galculator</command>
+      </action>
+    </keybind>
     <keybind key="W-o">
       <action name="Execute">
         <startupnotify>

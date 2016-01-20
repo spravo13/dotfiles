@@ -89,3 +89,5 @@ conky -q &
 
 ## Gnome Pie
 (sleep 5s && gnome-pie) &
+
+(sleep 10s && indicator-kdeconnect) &

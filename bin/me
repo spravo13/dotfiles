@@ -5,12 +5,12 @@ unset wlan0_fn
 
 ifconfig eth0 &> "/dev/null"
 if [[ $? == 0 ]]; then
-	function eth0() { /sbin/ifconfig eth0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'; };
+	function eth0() { /sbin/ifconfig eth0 | grep "inet " | awk '{print $2}'; };
 	eth0_fn="yes";
 fi
 ifconfig wlan0 &> "/dev/null"
 if [[ $? == 0 ]]; then
-	function wlan0 { /sbin/ifconfig wlan0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'; };
+	function wlan0() { /sbin/ifconfig wlan0 | grep "inet " | awk '{print $2}'; };
 	wlan0_fn="yes";
 fi
 

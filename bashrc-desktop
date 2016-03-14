@@ -1,8 +1,3 @@
-#added for ssh keys
-added_keys=`ssh-add -l`
-if [ ! $(echo $added_keys | grep -o -e id_rsa) ]; then
-	ssh-add "$HOME/.ssh/id_rsa"
-fi
 # stuff{{{1
 # If not running interactively, don't do anything
 case $- in
@@ -118,4 +113,11 @@ shopt -s histappend
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+
+#added for ssh keys
+added_keys=`ssh-add -l`
+if [ ! $(echo $added_keys | grep -o -e id_rsa) ]; then
+	ssh-add "$HOME/.ssh/id_rsa"
+fi
 

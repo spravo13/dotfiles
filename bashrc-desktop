@@ -50,7 +50,7 @@ cmd_check() {
 }
 
 
-PS1='\[${BIPurple}\]\u: \[${IWhite}\]\W\[$(cmd_check)\]\[${Cyan}\] \[$(__git_ps1 "%s ")\]\[${Yellow}\]$\[${Color_Off}\] '
+PS1='\[${BIPurple}\]\u: \[${IWhite}\]\W\[$(cmd_check)\]\[${Cyan}\] \[$(__git_ps1 "%s ")\]$([ \j -gt 0 ] && echo "\j ")\[${Yellow}\]\$\[${Color_Off}\] '
 
 
 PS2="\$"

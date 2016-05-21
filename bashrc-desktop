@@ -10,7 +10,6 @@ esac
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
-shopt -s histappend
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
@@ -24,9 +23,9 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 	debian_chroot=$(cat /etc/debian_chroot)
 fi
 # set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-xterm-color) color_prompt=yes;;
-esac
+#case "$TERM" in
+#xterm-color) color_prompt=yes;;
+#esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
@@ -46,7 +45,16 @@ esac
 #	fi
 #fi
 
-color_prompt=yes
+#COLORS 
+Color_Off=$'\033[m' 
+Green=$'\033[0;32m'
+Red=$'\033[0;31m'
+BIPurple=$'\033[1;95m'
+Cyan=$'\033[0;36m'
+IWhite=$'\033[0;97m'
+Yellow=$'\033[0;33m'
+
+#color_prompt=yes
 
 cmd_check() {
 	if [[ $? = 0 ]]; then
@@ -68,7 +76,7 @@ PS2="\$"
 #		export TERM=xterm-256color
 #	fi
 #	unset color_prompt force_color_prompt
-	unset color_prompt 
+#	unset color_prompt 
 	# If this is an xterm set the title to user@host:dir
 #	case "$TERM" in
 #	xterm*|rxvt*)
@@ -106,9 +114,9 @@ PS2="\$"
 	fi
 #}}}
 # load other files
-source ~/dotfiles/bin/colors.sh
+#source ~/dotfiles/bin/colors.sh
 source ~/dotfiles/bin/git-prompt.sh
-source ~/dotfiles/bash_aliases
+#source ~/dotfiles/bash_aliases
 
 PATH="$HOME/bin:$PATH";
 
@@ -121,16 +129,35 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+#aliases
+alias g="grep"
+alias ls="ls --color=auto"
+
+alias sb='source ~/.bashrc'
+alias r='reset'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+alias rm='rm -i'
+
+alias vnc='vncviewer'
+alias vncv='vncviewer'
+alias vncs='/usr/lib/vino/vino-server'
+alias vncserver='/usr/lib/vino/vino-server'
+alias ftpserver='sudo service vsftpd start'
+alias ftpserver-start='sudo service vsftpd start'
+alias ftpserver-stop='sudo service vsftpd stop'
+alias irc='irssi'
+
+alias john='/usr/local/share/john-1.8.0-jumbo-1/run/john'
 
 #added for ssh keys
 added_keys=`ssh-add -l`
 if [ ! $(echo $added_keys | grep -o -e id_rsa) ]; then
-	ssh-add "$HOME/.ssh/id_rsa"
+		ssh-add "$HOME/.ssh/id_rsa"
 fi
-
-PATH="$HOME/bin/depot_tools:$PATH"
-
-
-umask 022
-
 

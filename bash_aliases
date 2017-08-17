@@ -23,3 +23,5 @@ alias irc='irssi'
 
 alias john='/usr/local/share/john-1.8.0-jumbo-1/run/john'
 
+alias tv='/usr/local/bin/terminal_velocity /home/spencer/notes'
+alias terminal_velocity='/usr/local/bin/terminal_velocity /home/spencer/notes'

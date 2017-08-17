@@ -54,18 +54,28 @@ Cyan=$'\033[0;36m'
 IWhite=$'\033[0;97m'
 Yellow=$'\033[0;33m'
 
-#color_prompt=yes
+color_prompt=yes
 
+cmd_check_color() {
+        if [[ $? = 0 ]]; then
+                echo "${Green}";
+        else
+                echo "${Red}";
+                return 1;
+        fi;
+}
 cmd_check() {
-	if [[ $? = 0 ]]; then
-		echo " ${Green}✓";
-	else
-		echo " ${Red}✗";
-	fi;
+        if [[ $? = 0 ]]; then
+                echo " ✓ ";
+        else
+                echo " ✗ ";
+                return 1;
+        fi;
 }
 
 
-PS1='\[${BIPurple}\]\u: \[${IWhite}\]\W\[$(cmd_check)\]\[${Cyan}\] \[$(__git_ps1 "%s ")\]$([ \j -gt 0 ] && echo "\j ")\[${Yellow}\]\$\[${Color_Off}\] '
+PS1='\[${BIPurple}\]\u: \[${IWhite}\]\W\[$(cmd_check_color)\]$(cmd_check)\[${Cyan}\]$(__git_ps1 "%s ")$([ \j -gt 0 ] && echo "\j ")\[${Yellow}\]\$\[${Color_Off}\] '
+
 
 PS2="\$"
 

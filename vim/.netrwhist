@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/spencer/3dhome'
 let g:netrw_dirhist_2='/home/spencer/.tmux'
 let g:netrw_dirhist_3='/home/spencer/projects/c++/cpp-math/.git'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/home/spencer/projects/bash'
 let g:netrw_dirhist_5='/home/spencer/htdocs/codeshrub/inc'
 let g:netrw_dirhist_6='/home/spencer/projects/bash/angp'
 let g:netrw_dirhist_7='/home/spencer/dotfiles/vim/bundle/vim-unimpaired'
+let g:netrw_dirhist_8='/home/spencer/.tmux'

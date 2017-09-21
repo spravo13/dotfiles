@@ -37,20 +37,44 @@ if [ -n "$force_color_prompt" ]; then
 		color_prompt=
 	fi
 fi
+
+color_prompt=yes
+
+#cmd_check() {
+#	if [[ $? = 0 ]]; then
+#		echo " ${Green}✓";
+#	else
+#		echo " ${Red}✗";
+#	fi;
+#}
+
+cmd_check_color() {
+        if [[ $? = 0 ]]; then
+                echo "${Green}";
+        else
+                echo "${Red}";
+                return 1;
+        fi;
+}
 cmd_check() {
-	if [[ $? = 0 ]]; then
-		echo " ${Green}✓";
-	else
-		echo " ${Red}✗";
-	fi;
+        if [[ $? = 0 ]]; then
+                echo " ✓ ";
+        else
+                echo " ✗ ";
+                return 1;
+        fi;
 }
 
-PS1='\
-${BIOrange}\u: ${IWhite}\W\
-$(cmd_check) \
-$(__git_ps1 "${Cyan}%s ")${Yellow}\
-\$${Color_Off} \
-'
+
+PS1='\[${BIOrange}\]\u@\h: \[${IWhite}\]\W\[$(cmd_check_color)\]$(cmd_check)\[${Cyan}\]$(__git_ps1 "%s ")$([ \j -gt 0 ] && echo "\j ")\[${Yellow}\]\$\[${Color_Off}\] '
+
+
+#PS1='\
+#${BIOrange}\u: ${IWhite}\W\
+#$(cmd_check) \
+#$(__git_ps1 "${Cyan}%s ")${Yellow}\
+#\$${Color_Off} \
+#'
 
 PS2="\$"
 
